@@ -1,0 +1,9 @@
+Makefile
+Makefile.old
+blib
+Discount.bs
+Discount.c
+Discount.o
+pm_to_blib
+*.swp
+discount-1.3.1
