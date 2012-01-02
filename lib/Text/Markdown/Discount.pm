@@ -25,7 +25,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 require XSLoader;
 XSLoader::load('Text::Markdown::Discount', $VERSION);
@@ -59,7 +59,7 @@ __END__
 =head1 NAME
 
 Text::Markdown::Discount - Perl extension interface for C<Discount>, an 
-implementation of John Gruber's C<makedown> L<http://daringfireball.net/projects/markdown/> in C developed by David Loren Parsons L<http://www.pell.portland.or.us/~orc>.
+implementation of John Gruber's C<markdown> L<http://daringfireball.net/projects/markdown/> in C developed by David Loren Parsons L<http://www.pell.portland.or.us/~orc>.
 
 =head1 SYNOPSIS
 
