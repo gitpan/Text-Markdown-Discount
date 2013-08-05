@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Text-Markdown-Discount
-version:            0.07
+version:            0.08
 abstract:           fast function for converting markdown to HTML (requires C compiler)
 author:
     - Masayoshi Sekimura <sekimura@cpan.org>
