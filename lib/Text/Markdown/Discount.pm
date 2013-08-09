@@ -25,7 +25,7 @@ our @EXPORT = qw(
 	
 );
 
-our $VERSION = '0.09';
+our $VERSION = '0.10';
 
 require XSLoader;
 XSLoader::load('Text::Markdown::Discount', $VERSION);
@@ -87,6 +87,27 @@ is not compatible with the C<markdown()> function in L<Text::Markdown>.
 
 I<markdown> is exported by default.
 
+
+=head2 FUNCTION
+
+=over
+
+=item C<Text::Markdown::Discount::with_html5_tags()>
+
+This function enables html5 block-level elements support.
+C<< Text::Markdown::Discount::markdown() >> will handle these html5 tags as
+block elements: aside, footer, header, hgroup, nav, section, article.
+
+B<NOTE>: There is no way to disable/re-enable this feature in one process right now.
+
+  use Text::Markdown::Discount;
+  Text::Markdown::Discount::with_html5_tags();
+  my $html = markdown('<article>content</article>');
+  #
+  # In $html, <article> tag won't be wrapped with <p> tag
+
+=back
+
 =head1 SEE ALSO
 
 There are other modules on CPAN for converting Markdown:
@@ -145,7 +166,7 @@ Masayoshi Sekimura, E<lt>sekimura@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2009 by Masayoshi Sekimura
+Copyright (C) 2013 by Masayoshi Sekimura
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.0 or,
